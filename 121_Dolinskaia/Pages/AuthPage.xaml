@@ -1,0 +1,88 @@
+﻿<Page x:Class="_121_Dolinskaia.Pages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:_121_Dolinskaia.Pages"
+      mc:Ignorable="d"
+      d:DesignHeight="450"
+      d:DesignWidth="800"
+      Title="Авторизация">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45" />
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="72*" />
+            <RowDefinition Height="72*" />
+            <RowDefinition Height="45" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="222*" />
+            <ColumnDefinition Width="115*" />
+            <ColumnDefinition Width="263*" />
+            <ColumnDefinition Width="200*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Логин"
+               Width="Auto"
+               Grid.Row="1"
+               Grid.Column="1"
+               VerticalAlignment="Center" />
+        <Label Content="Пароль"
+               Width="Auto"
+               Grid.Row="2"
+               Grid.Column="1"
+               VerticalAlignment="Center" />
+        <TextBox x:Name="TextBoxLogin"
+                 Width="Auto"
+                 Grid.Row="1"
+                 Grid.Column="2"
+                 Margin="0,15,0,15" 
+                 ToolTip="Логин пользователя"
+                 Background="Transparent"
+                 LostFocus="txtBxLogin_LostFocus"/>
+        <PasswordBox x:Name="PasswordBox"
+                     Width="Auto"
+                     Background="Transparent"
+                     Grid.Row="2"
+                     Grid.Column="2"
+                     Margin="0,15,0,15" 
+                     ToolTip="Пароль от учетной записи"
+                     LostFocus="PasswordBox_LostFocus"/>
+        <Button Width="Auto"
+                Grid.Row="3"
+                Grid.Column="2"
+                Margin="0,5,0,5" 
+                Content="Вход"
+                ToolTip="Войти в систему"
+                Click="Button_Click"/>
+        <Button Width="Auto"
+                Grid.Row="4"
+                Grid.Column="2"
+                Margin="0,5,0,5"
+                Content="Регистрация"
+                ToolTip="Создать новый аккаунт"
+                Click="Button_Click_1"/>
+        <TextBlock Text="Логин"
+                   Foreground="Gray"
+                   Name="txtHintLogin"
+                   FontSize="18pt"
+                   Width="Auto"
+                   Height="Auto"
+                   Grid.Column="2"
+                   Grid.Row="1"
+                   VerticalAlignment="Center" 
+                   PreviewMouseDown="txtHintLogin_PreviewMouseDown"/>
+        <TextBlock Text="Пароль"
+                   Foreground="Gray"
+                   Name="txtHintPassword"
+                   FontSize="18pt"
+                   Width="Auto"
+                   Grid.Column="2"
+                   Grid.Row="2"
+                   VerticalAlignment="Center" 
+                   PreviewMouseDown="txtHintPassword_PreviewMouseDown"/>
+    </Grid>
+</Page>
